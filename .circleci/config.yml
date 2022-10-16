@@ -1,6 +1,7 @@
 version: 2.1
 orbs:
   ruby: circleci/ruby@0.1.2 
+  heroku: circleci/heroku@1.2.6
 
 jobs:
   build:
@@ -28,7 +29,15 @@ jobs:
       - run: bundle exec rails db:migrate
       - run: bundle exec rspec
 
-      - checkout
-      - run:
-          name: Deploy Main to Heroku
-          command: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git main
+workflows:
+  build-workflow:
+    jobs:
+      - build
+
+  heroku-workflow:
+    jobs:
+      - heroku/deploy-via-git:
+          force: true 
+          app-name: reportcard-rails
+          api-key: HEROKU_API_KEY
+          branch: main
