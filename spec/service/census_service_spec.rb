@@ -46,7 +46,6 @@ RSpec.describe CensusService do
 
       expect(response[:result][:addressMatches][0][:geographies][:"Unified School Districts"].first).to have_key(:BASENAME)
       expect(response[:result][:addressMatches][0][:geographies][:"Unified School Districts"].first[:BASENAME]).to be_a(String)
-
     end
   end
 
