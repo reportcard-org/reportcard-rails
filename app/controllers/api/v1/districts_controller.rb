@@ -14,7 +14,11 @@ class Api::V1::DistrictsController < ApplicationController
 
     finance_district = UrbanInstituteFacade.get_district_financial_data(@lea_id)
 
-    total_district = TotalDistrict.new(basic_district,enrollment_district,finance_district)
+    total_district = DistrictTotal.new(basic_district,enrollment_district,finance_district)
+
+    serializer = DistrictTotalSerializer.new(total_district)
+
+    render json: serializer.formatted_response, status: 200
 
   end
 
