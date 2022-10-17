@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe DistrictTotal do
 
-  it 'exists' do
-    basic_district_data = [:result,
+  before :each do
+    @basic_district_data = [:result,
  {:input=>
    {:address=>
      {:city=>"Washington",
@@ -61,7 +61,7 @@ RSpec.describe DistrictTotal do
        :suffixQualifier=>"",
        :preQualifier=>""},:matchedAddress=>"1600 PENNSYLVANIA AVE NW, WASHINGTON, DC, 20500"}]}]
 
-    enrollment_district_data = {:count=>1,
+    @enrollment_district_data = {:count=>1,
       :next=>nil,
       :previous=>nil,
       :results=>
@@ -134,7 +134,7 @@ RSpec.describe DistrictTotal do
           :school_psychologists_fte=>nil,
           :support_staff_stu_wo_psych_fte=>nil}]}
     
-    financial_district_data = {:count=>1,
+    @financial_district_data = {:count=>1,
  :next=>nil,
  :previous=>nil,
  :results=>
@@ -273,13 +273,19 @@ RSpec.describe DistrictTotal do
     :enrollment_fall_school=>48568,
     :exp_current_resa=>0.0}]}
 
-    basic_district = DistrictBasic.new(basic_district_data)
-    enrollment_district = DistrictEnrollment.new(enrollment_district_data)
-    financial_district = DistrictFinance.new(financial_district_data)
+    @basic_district = DistrictBasic.new(@basic_district_data)
+    @enrollment_district = DistrictEnrollment.new(@enrollment_district_data)
+    @financial_district = DistrictFinance.new(@financial_district_data)
 
-    total_district = DistrictTotal.new(basic_district,enrollment_district,financial_district)
+    @total_district = DistrictTotal.new(@basic_district,@enrollment_district,@financial_district)
+  end
 
-    expect(total_district).to be_a(DistrictTotal)
+  it 'exists' do
+    expect(@total_district).to be_a(DistrictTotal)
+  end
+
+  it 'returns student teacher ratio' do
+
   end
 
 end
