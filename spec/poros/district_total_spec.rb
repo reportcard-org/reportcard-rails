@@ -284,12 +284,24 @@ RSpec.describe DistrictTotal do
     expect(@total_district).to be_a(DistrictTotal)
   end
 
+  it 'returns school district name' do
+    expect(@total_district.district_name).to eq("District of Columbia Public Schools")
+  end
+
   it 'returns student teacher ratio' do
     expect(@total_district.student_teacher_ratio).to eq(0.082)
   end
 
   it 'returns per student expenditure' do
     expect(@total_district.per_student_expenditure).to eq(31844.21)
+  end
+
+  it 'returns per teacher expenditures on salary' do
+    expect(@total_district.per_teacher_salary_expenses).to eq(106562.36)
+  end
+
+  it 'returns number of students in district' do
+    expect(@total_district.student_population_size).to eq(49489)
   end
 
 end

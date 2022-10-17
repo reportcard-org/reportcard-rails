@@ -24,4 +24,8 @@ class DistrictTotal
     (@total_expenditure.to_f / @student_population_size.to_f).round(2)
   end
 
+  def per_teacher_salary_expenses
+    (@salaries_instruction.to_f / @full_time_teachers.to_f).round(2)
+  end
+
 end
