@@ -12,7 +12,7 @@ describe 'district API' do
 
     headers = {"CONTENT_TYPE" => "application/json"}
 
-    post "/api/v1/district_data", headers: headers, params: JSON.generate(address_params: address_params)
+    post "/api/v1/district_data", headers: headers, params: JSON.generate(address_params)
 
     expect(response).to be_successful
 
