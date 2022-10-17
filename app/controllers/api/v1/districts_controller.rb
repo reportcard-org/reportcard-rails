@@ -1,9 +1,9 @@
 class Api::V1::DistrictsController < ApplicationController
 
   def show
-    @city = params[:address_params][:city]
-    @street = params[:address_params][:street]
-    @state = params[:address_params][:state]
+    @city = params[:city]
+    @street = params[:street]
+    @state = params[:state]
 
     basic_district = CensusFacade.get_school_district(@street, @city, @state).first
 
