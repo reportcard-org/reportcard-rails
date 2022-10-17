@@ -7,7 +7,7 @@ class Api::V1::DistrictsController < ApplicationController
 
     basic_district = CensusFacade.get_school_district(@street, @city, @state).first
 
-    @lea_id = basic_district.lea_id.to_i
+    @lea_id = basic_district.lea_id
 
     enrollment_district = UrbanInstituteFacade.get_district_enrollment_data(@lea_id)
 
