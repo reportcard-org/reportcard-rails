@@ -285,7 +285,7 @@ RSpec.describe DistrictTotal do
   end
 
   it 'returns student teacher ratio' do
-
+    expect(@total_district.student_teacher_ratio)
   end
 
 end
