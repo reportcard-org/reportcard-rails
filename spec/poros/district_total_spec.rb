@@ -288,6 +288,8 @@ RSpec.describe DistrictTotal do
     expect(@total_district.student_teacher_ratio).to eq(0.082)
   end
 
-  it ''
+  it 'returns per student expenditure' do
+    expect(@total_district.per_student_expenditure).to eq(31844.21)
+  end
 
 end
