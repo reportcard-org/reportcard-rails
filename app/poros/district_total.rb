@@ -5,7 +5,7 @@ class DistrictTotal
               :number_of_schools_in_district
 
   def initialize(basic_district,enrollment_district,financial_district)
-    @district_name = basic_district.name
+    @district_name = enrollment_district.district_name
 
     @student_population_size = enrollment_district.enrollment
     @full_time_teachers = enrollment_district.full_time_teachers
