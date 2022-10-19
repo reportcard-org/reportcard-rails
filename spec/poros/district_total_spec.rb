@@ -288,20 +288,24 @@ RSpec.describe DistrictTotal do
     expect(@total_district.lea_id).to eq("1100030")
   end
 
+  it 'returns district latitude' do
+    expect(@total_district.latitude).to eq("+38.9047587")
+  end
+
+  it 'returns district longitude' do
+    expect(@total_district.longitude).to eq("-077.0162860")
+  end
+
   it 'returns school district name' do
     expect(@total_district.district_name).to eq("District of Columbia Public Schools")
   end
 
   it 'returns urban_centric_locale in readable format' do
-    expect(@total_district.urban_centric_locale).to eq("City, Midsize")
+    expect(@total_district.urban_centric_locale).to eq("Large City")
   end
 
   it 'returns number of schools in the district' do
-    expect(@total_district.number_of_schools).to eq(113)
-  end
-
-  it 'returns number of students in the district' do
-    expect(@total_district.student_enrollment).to eq(49489)
+    expect(@total_district.number_of_schools_in_district).to eq(113)
   end
 
   it 'returns number of pre-k teachers' do
