@@ -97,9 +97,9 @@ RSpec.describe DistrictEnrollment do
 
       expect(district_enrollment.student_teacher_ratio).to eq(12.22)
 
-      expect(district_enrollment.instructional_aides).to eq(1064)
+      expect(district_enrollment.instructional_aides_total).to eq(1064)
 
-      expect(district_enrollment.total_guidance_counselors).to eq(118)
+      expect(district_enrollment.guidance_counselors_total).to eq(118)
 
       expect(district_enrollment.student_guidance_counselor_ratio).to eq(419.40)
 
