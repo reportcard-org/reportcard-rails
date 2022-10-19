@@ -63,5 +63,7 @@ RSpec.describe DistrictBasic do
         districtbasic = DistrictBasic.new(data)
         expect(districtbasic.name).to eq("District of Columbia Public Schools")
         expect(districtbasic.lea_id).to eq("1100030")
-end
+        expect(districtbasic.latitude).to eq("+38.9047587")
+        expect(districtbasic.longitude).to eq("-077.0162860")
+  end
 end
