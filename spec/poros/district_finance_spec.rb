@@ -145,7 +145,13 @@ RSpec.describe DistrictFinance do
     district_finance = DistrictFinance.new(data)
 
     expect(district_finance.salaries_total).to eq(753686000)
+
     expect(district_finance.salaries_instruction).to eq(431471000)
+
+    expect(district_finance.total_expenditure).to eq(1575938000)
+
+    expect(district_finance.expenses_for_instruction).to eq(537647000)
+
   end
 
 end
