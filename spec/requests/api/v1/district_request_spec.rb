@@ -54,7 +54,8 @@ describe 'district API' do
     expect(attributes[21]).to have_key(:instruction_salary_percent_of_total)
     expect(attributes[22]).to have_key(:per_student_expenditure)
     expect(attributes[23]).to have_key(:per_teacher_salary_expenses)
-
+    expect(attributes[24]).to have_key(:latitude)
+    expect(attributes[25]).to have_key(:longitude)
 
   end
 
@@ -109,6 +110,8 @@ describe 'district API' do
     expect(attributes[21]).to have_key(:instruction_salary_percent_of_total)
     expect(attributes[22]).to have_key(:per_student_expenditure)
     expect(attributes[23]).to have_key(:per_teacher_salary_expenses)
+    expect(attributes[24]).to have_key(:latitude)
+    expect(attributes[25]).to have_key(:longitude)
 
   end
 
