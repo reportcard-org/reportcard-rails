@@ -35,7 +35,7 @@ class DistrictAddressSerializer
           per_student_expenditure: @district.per_student_expenditure,
           per_teacher_salary_expenses: @district.per_teacher_salary_expenses,
           latitude: @district.latitude,
-          longitude: @district.longitude,
+          longitude: @district.longitude
         ]
       }
     }
