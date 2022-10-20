@@ -9,3 +9,13 @@
 5.times do
   user = User.create(name: Faker::Name.name, email: Faker::Internet.email )
 end
+
+5.times do
+  district = District.create(name: Faker::Name.name, lea_id: Faker::Number.number(digits: 4) )
+end
+
+user_district_1 = UserDistrict.create(user_id: User.all[0].id, district_id: District.all[0].id)
+user_district_2 = UserDistrict.create(user_id: User.all[1].id, district_id: District.all[1].id)
+user_district_3 = UserDistrict.create(user_id: User.all[2].id, district_id: District.all[2].id)
+user_district_4 = UserDistrict.create(user_id: User.all[3].id, district_id: District.all[3].id)
+user_district_5 = UserDistrict.create(user_id: User.all[4].id, district_id: District.all[4].id)
