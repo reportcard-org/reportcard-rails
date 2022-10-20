@@ -15,7 +15,7 @@ class Api::V1::DistrictsController < ApplicationController
 
     total_district = DistrictTotal.new(basic_district,enrollment_district,finance_district)
 
-    serializer = DistrictTotalSerializer.new(total_district)
+    serializer = DistrictAddressSerializer.new(total_district)
 
     render json: serializer.formatted_response, status: 200
 
