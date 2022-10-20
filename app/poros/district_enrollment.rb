@@ -44,7 +44,7 @@ class DistrictEnrollment
 
     @guidance_counselors_total = data[:results].first[:guidance_counselors_total_fte]
 
-    @total_library_staff = (data[:results].first[:librarian_specialists_fte] + data[:results].first[:librarian_support_staff_fte])
+    @total_library_staff = (data[:results].first[:librarian_specialists_fte])
 
     @student_librarian_ratio = (@enrollment.to_f / @total_library_staff).round(2)
 
