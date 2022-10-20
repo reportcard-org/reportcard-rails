@@ -103,9 +103,9 @@ RSpec.describe DistrictEnrollment do
 
       expect(district_enrollment.student_guidance_counselor_ratio).to eq(419.40)
 
-      expect(district_enrollment.total_library_staff).to eq(99)
+      expect(district_enrollment.total_library_staff).to eq(96)
 
-      expect(district_enrollment.student_librarian_ratio).to eq(499.89)
+      expect(district_enrollment.student_librarian_ratio).to eq(515.51)
 
       # expect(district_enrollment.total_school_psychologists).to eq(0)
 
