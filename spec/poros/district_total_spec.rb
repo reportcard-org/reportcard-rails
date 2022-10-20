@@ -345,11 +345,11 @@ RSpec.describe DistrictTotal do
   end
 
   it 'returns total number of library staff' do
-    expect(@total_district.total_library_staff).to eq(99)
+    expect(@total_district.total_library_staff).to eq(96)
   end
 
   it 'returns student librarian ratio' do
-    expect(@total_district.student_librarian_ratio).to eq(499.89)
+    expect(@total_district.student_librarian_ratio).to eq(515.51)
   end
 
   it 'returns per student expenditure' do
