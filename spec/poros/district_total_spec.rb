@@ -235,8 +235,8 @@ RSpec.describe DistrictTotal do
     :payments_local_govt=>0,
     :payments_other_sch_system=>0,
     :salaries_total=>753686000,
-    :salaries_instruction=>431471000,
-    :salaries_teachers_regular_prog=>276750000,
+    :salaries_instruction=>431_471_000,
+    :salaries_teachers_regular_prog=>276_750_000,
     :salaries_teachers_sped=>66666000,
     :salaries_teachers_vocational=>7565000,
     :salaries_teachers_other_ed=>4450000,
@@ -284,16 +284,100 @@ RSpec.describe DistrictTotal do
     expect(@total_district).to be_a(DistrictTotal)
   end
 
+  it 'returns lea_id' do
+    expect(@total_district.lea_id).to eq("1100030")
+  end
+
+  it 'returns district latitude' do
+    expect(@total_district.latitude).to eq("+38.9047587")
+  end
+
+  it 'returns district longitude' do
+    expect(@total_district.longitude).to eq("-077.0162860")
+  end
+
   it 'returns school district name' do
     expect(@total_district.district_name).to eq("District of Columbia Public Schools")
   end
 
+  it 'returns urban_centric_locale in readable format' do
+    expect(@total_district.urban_centric_locale).to eq("Large City")
+  end
+
+  it 'returns number of schools in the district' do
+    expect(@total_district.number_of_schools_in_district).to eq(113)
+  end
+
+  it 'returns number of pre-k teachers' do
+    expect(@total_district.pre_k_teachers).to eq(365)
+  end
+
+  it 'returns number of kindergarten teachers' do
+    expect(@total_district.kindergarten_teachers).to eq(211)
+  end
+
+  it 'returns number of elementary teachers' do
+    expect(@total_district.elementary_teachers).to eq(2075)
+  end
+
+  it 'returns number of secondary teachers' do
+    expect(@total_district.secondary_teachers).to eq(1396)
+  end
+
+  it 'returns total number of teachers' do
+    expect(@total_district.total_teachers).to eq(4049)
+  end
+
+  it 'returns number of instructional aides' do
+    expect(@total_district.instructional_aides).to eq(1064)
+  end
+
+  it 'returns number of guidance counselors' do
+    expect(@total_district.guidance_counselors).to eq(118)
+  end
+
+  it 'returns student guidance counselor ratio' do
+    expect(@total_district.student_guidance_counselor_ratio).to eq(419.40)
+  end
+
   it 'returns student teacher ratio' do
-    expect(@total_district.student_teacher_ratio).to eq(0.082)
+    expect(@total_district.student_teacher_ratio).to eq(12.22)
+  end
+
+  it 'returns total number of library staff' do
+    expect(@total_district.total_library_staff).to eq(99)
+  end
+
+  it 'returns student librarian ratio' do
+    expect(@total_district.student_librarian_ratio).to eq(499.89)
   end
 
   it 'returns per student expenditure' do
     expect(@total_district.per_student_expenditure).to eq(31844.21)
+  end
+
+  it 'returns total number of staff' do
+    expect(@total_district.total_staff).to eq(8402)
+  end
+
+  it 'returns total district expenditures' do
+    expect(@total_district.total_expenditure).to eq(1575938000)
+  end
+
+  it 'returns expenditure on instruction' do
+    expect(@total_district.instruction_expenses).to eq(537647000)
+  end
+
+  it 'returns total salary expenses' do
+    expect(@total_district.total_salaries).to eq(753686000)
+  end
+
+  it 'returns total instructional salaries' do
+    expect(@total_district.instructional_salaries).to eq(431471000)
+  end
+
+  it 'returns instructional salaries as percent of total salaries' do
+    expect(@total_district.instructional_salary_percent).to eq(57.25)
   end
 
   it 'returns per teacher expenditures on salary' do

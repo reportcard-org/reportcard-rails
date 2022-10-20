@@ -79,7 +79,40 @@ RSpec.describe DistrictEnrollment do
       
       district_enrollment = DistrictEnrollment.new(data)
 
+      expect(district_enrollment.district_name).to eq("District of Columbia Public Schools")
+
+      expect(district_enrollment.urban_centric_locale).to eq(11)
+
+      expect(district_enrollment.pre_k_teachers).to eq(365)
+
+      expect(district_enrollment.kindergarten_teachers).to eq(211)
+
+      expect(district_enrollment.elementary_teachers).to eq(2075)
+
+      expect(district_enrollment.secondary_teachers).to eq(1396)
+
+      expect(district_enrollment.total_teachers).to eq(4049)
+
       expect(district_enrollment.number_of_schools).to eq(113)
+
+      expect(district_enrollment.student_teacher_ratio).to eq(12.22)
+
+      expect(district_enrollment.instructional_aides_total).to eq(1064)
+
+      expect(district_enrollment.guidance_counselors_total).to eq(118)
+
+      expect(district_enrollment.student_guidance_counselor_ratio).to eq(419.40)
+
+      expect(district_enrollment.total_library_staff).to eq(99)
+
+      expect(district_enrollment.student_librarian_ratio).to eq(499.89)
+
+      # expect(district_enrollment.total_school_psychologists).to eq(0)
+
+      # expect(district_enrollment.student_psychologist_ratio).to eq("divide by infinity error")
+
+      expect(district_enrollment.total_staff).to eq(8402)
+
       expect(district_enrollment.enrollment).to eq(49489)
 
   end
