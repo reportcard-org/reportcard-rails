@@ -28,6 +28,13 @@ module Types
       District.find(id)
     end
 
+    field :userdistricts, [Types::UserDistrictType], null: false do
+      argument :user_id, Integer, required: true
+    end
+
+    def userdistricts(user_id:)
+      UserDistrict.where(user_id: user_id)
+    end
     
     # Add `node(id: ID!) and `nodes(ids: [ID!]!)`
     include GraphQL::Types::Relay::HasNodeField
