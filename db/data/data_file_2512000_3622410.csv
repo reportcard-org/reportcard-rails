@@ -1,5 +1,4 @@
 lea_id,district_name,urban_centric_locale,number_of_schools_in_district,enrollment,pre_k_teachers,kindergarten_teachers,elementary_teachers,secondary_teachers,total_teachers,student_teacher_ratio,instructional_aides,guidance_counselors,student_guidance_counselor_ratio,librarian_total,student_librarian_ratio,total_staff,district_expense_total,expenses_for_instruction,salaries_total,salaries_instruction,instruction_salary_percent_of_total,per_student_expenditure,per_teacher_salary_expenses
-2511970,Walpole,Large Suburb,8,3753,5,17,183,86,292,12.85,72,12,312.75,2,1876.5,500,70129000,41236000,40823000,28924000,70.85,18686.12,99054.79
 2512000,Waltham,Small City,10,5633,9,34,325,145,515,10.94,128,11,512.09,8,704.13,855,138038000,79419000,74692000,49804000,66.68,24505.24,96706.8
 2512030,Ware,Rural (fringe),3,1189,3,5,44,39,92,12.92,43,2,594.5,3,396.33,177,21661000,11411000,10824000,7643000,70.61,18217.83,83076.09
 2512060,Wareham,Midsize Suburb,5,2126,4,12,99,60,177,12.01,65,7,303.71,0,,324,59337000,26864000,25731000,16011000,62.22,27910.16,90457.63
