@@ -1,6 +1,6 @@
 class Mutations::CreateUserDistrict < Mutations::BaseMutation
-  argument :user_id, Integer, required: true
-  argument :district_id, Integer, required: true
+  argument :user_id, String, required: true
+  argument :district_id, String, required: true
 
   field :user_district, Types::UserDistrictType, null: false
   field :errors, [String], null: false
