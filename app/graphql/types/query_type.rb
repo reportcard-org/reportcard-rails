@@ -8,11 +8,11 @@ module Types
     end
 
     field :user, Types::UserType, null: false do
-      argument :id, ID, required: true
+      argument :email, String
     end
 
-    def user(id:)
-      User.find(id)
+    def user(email:)
+      User.find_by(email: email)
     end
 
     field :districts, [Types::DistrictType], null: false
