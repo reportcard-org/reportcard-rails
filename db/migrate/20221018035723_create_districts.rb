@@ -2,7 +2,7 @@ class CreateDistricts < ActiveRecord::Migration[5.2]
   def change
     create_table :districts do |t|
       t.string :name
-      t.bigint :lea_id
+      t.string :lea_id
       t.string :urban_centric_locale
       t.bigint :number_of_schools_in_district
       t.bigint :enrollment

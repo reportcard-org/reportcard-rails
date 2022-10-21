@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2022_10_18_045033) do
 
   create_table "districts", force: :cascade do |t|
     t.string "name"
-    t.bigint "lea_id"
+    t.string "lea_id"
     t.string "urban_centric_locale"
     t.bigint "number_of_schools_in_district"
     t.bigint "enrollment"
