@@ -27,6 +27,8 @@ module Types
     def district(id:)
       District.find(id)
     end
+
+    
     # Add `node(id: ID!) and `nodes(ids: [ID!]!)`
     include GraphQL::Types::Relay::HasNodeField
     include GraphQL::Types::Relay::HasNodesField
