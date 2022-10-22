@@ -1,20 +1,21 @@
 class Mutations::CreateUserDistrict < Mutations::BaseMutation
-  argument :user_id, Integer, required: true
-  argument :district_id, Integer, required: true
+  argument :userId, Integer, required: true
+  argument :districtId, Integer, required: true
 
-  field :user_district, Types::UserDistrictType, null: false
+  field :userdistrict, Types::UserDistrictType, null: false
   field :errors, [String], null: false
-  def resolve(user_id:, district_id:)
-    user_district = UserDistrict.new(user_id: user_id, district_id: district_id)
+  
+  def resolve(userId:, districtId:)
+    user_district = UserDistrict.new(user_id: userId, district_id: districtId)
 
     if (user_district.save)
       {
-        user_district: user_district,
+        userdistrict: user_district,
         errors: []
       }
     else
       {
-        user_district: nil,
+        userdistrict: nil,
         errors: user_district.errors.full_messages
       }
     end
