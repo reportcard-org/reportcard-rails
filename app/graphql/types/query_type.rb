@@ -35,6 +35,14 @@ module Types
     def userdistricts(user_id:)
       UserDistrict.where(user_id: user_id)
     end
+
+    field :userdistrict, [Types::UserDistrictType], null: false do
+      argument :id, ID, required: false
+    end
+
+    def userdistrict(id:)
+      UserDistrict.find(id)
+    end
     
     # Add `node(id: ID!) and `nodes(ids: [ID!]!)`
     include GraphQL::Types::Relay::HasNodeField
