@@ -1,6 +1,6 @@
 class District < ApplicationRecord
-  validates :name, presence: true, allow_nil: true
-  validates :lea_id, presence: true, allow_nil: true
+  validates :name, presence: true
+  validates :lea_id, presence: true
   validates :urban_centric_locale, presence: true, allow_nil: true
   validates :number_of_schools_in_district, presence: true, allow_nil: true
   validates :enrollment, presence: true, allow_nil: true
