@@ -42,7 +42,14 @@ class DistrictEnrollment
 
     @instructional_aides_total = data[:results].first[:instructional_aides_fte]
 
-    @guidance_counselors_total = data[:results].first[:guidance_counselors_total_fte]
+    if data[:results].first[:guidance_counselors_total_fte].nil?
+      @guidance_counselors_total = -999
+      @student_guidance_counselor_ratio = -999
+    else
+      @guidance_counselors_total = data[:results].first[:guidance_counselors_total_fte]
+      @student_guidance_counselor_ratio = (@enrollment.to_f / @guidance_counselors_total.to_f).round(2)
+    end
+
 
     if (data[:results].first[:librarian_specialists_fte]).nil?
       @total_library_staff = -999
@@ -52,7 +59,7 @@ class DistrictEnrollment
       @student_librarian_ratio = (@enrollment.to_f / @total_library_staff).round(2)
     end
 
-    @student_guidance_counselor_ratio = (@enrollment.to_f / @guidance_counselors_total.to_f).round(2)
+
 
     @total_staff = data[:results].first[:staff_total_fte]
   end
