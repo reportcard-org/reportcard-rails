@@ -28,9 +28,21 @@ namespace :csv_load do
       t.student_teacher_ratio = row['student_teacher_ratio']
       t.instructional_aides = row['instructional_aides']
       t.guidance_counselors = row['guidance_counselors']
-      t.student_guidance_counselor_ratio = row['student_guidance_counselor_ratio']
+
+      if t.guidance_counselors == 0
+        t.student_guidance_counselor_ratio = -999
+      else
+        t.student_guidance_counselor_ratio = row['student_guidance_counselor_ratio']
+      end
+
       t.librarian_total = row['librarian_total']
-      t.student_librarian_ratio = row['student_librarian_ratio']
+
+      if t.librarian_total == 0
+        t.student_librarian_ratio = -999
+      else
+        t.student_librarian_ratio = row['student_librarian_ratio']
+      end
+
       t.total_staff = row['total_staff']
       t.district_expense_total = row['district_expense_total']
       t.expenses_for_instruction = row['expenses_for_instruction']
@@ -60,9 +72,21 @@ namespace :csv_load do
       t.student_teacher_ratio = row['student_teacher_ratio']
       t.instructional_aides = row['instructional_aides']
       t.guidance_counselors = row['guidance_counselors']
-      t.student_guidance_counselor_ratio = row['student_guidance_counselor_ratio']
+
+      if t.guidance_counselors == 0
+        t.student_guidance_counselor_ratio = -999
+      else
+        t.student_guidance_counselor_ratio = row['student_guidance_counselor_ratio']
+      end
+
       t.librarian_total = row['librarian_total']
-      t.student_librarian_ratio = row['student_librarian_ratio']
+
+      if t.librarian_total == 0
+        t.student_librarian_ratio = -999
+      else
+        t.student_librarian_ratio = row['student_librarian_ratio']
+      end
+
       t.total_staff = row['total_staff']
       t.district_expense_total = row['district_expense_total']
       t.expenses_for_instruction = row['expenses_for_instruction']
@@ -92,9 +116,21 @@ namespace :csv_load do
       t.student_teacher_ratio = row['student_teacher_ratio']
       t.instructional_aides = row['instructional_aides']
       t.guidance_counselors = row['guidance_counselors']
-      t.student_guidance_counselor_ratio = row['student_guidance_counselor_ratio']
+
+      if t.guidance_counselors == 0
+        t.student_guidance_counselor_ratio = -999
+      else
+        t.student_guidance_counselor_ratio = row['student_guidance_counselor_ratio']
+      end
+
       t.librarian_total = row['librarian_total']
-      t.student_librarian_ratio = row['student_librarian_ratio']
+
+      if t.librarian_total == 0
+        t.student_librarian_ratio = -999
+      else
+        t.student_librarian_ratio = row['student_librarian_ratio']
+      end
+      
       t.total_staff = row['total_staff']
       t.district_expense_total = row['district_expense_total']
       t.expenses_for_instruction = row['expenses_for_instruction']
@@ -124,9 +160,21 @@ namespace :csv_load do
       t.student_teacher_ratio = row['student_teacher_ratio']
       t.instructional_aides = row['instructional_aides']
       t.guidance_counselors = row['guidance_counselors']
-      t.student_guidance_counselor_ratio = row['student_guidance_counselor_ratio']
+
+      if t.guidance_counselors == 0
+        t.student_guidance_counselor_ratio = -999
+      else
+        t.student_guidance_counselor_ratio = row['student_guidance_counselor_ratio']
+      end
+
       t.librarian_total = row['librarian_total']
-      t.student_librarian_ratio = row['student_librarian_ratio']
+
+      if t.librarian_total == 0
+        t.student_librarian_ratio = -999
+      else
+        t.student_librarian_ratio = row['student_librarian_ratio']
+      end
+      
       t.total_staff = row['total_staff']
       t.district_expense_total = row['district_expense_total']
       t.expenses_for_instruction = row['expenses_for_instruction']
