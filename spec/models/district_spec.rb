@@ -8,6 +8,11 @@ RSpec.describe District, type: :model do
     it { should allow_value(nil).for(:urban_centric_locale) }
     it { should allow_value(nil).for(:number_of_schools_in_district) }
     it { should allow_value(nil).for(:enrollment) }
+    it { should allow_value(nil).for(:pre_k_teachers) }
+    it { should allow_value(nil).for(:kindergarten_teachers) }
+    it { should allow_value(nil).for(:elementary_teachers) }
+    it { should allow_value(nil).for(:secondary_teachers) }
+      it { should allow_value(nil).for(:total_teachers) }
 
   end
 
