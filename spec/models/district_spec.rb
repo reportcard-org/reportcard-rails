@@ -19,7 +19,10 @@ RSpec.describe District, type: :model do
     it { should allow_value(nil).for(:student_guidance_counselor_ratio) }
     it { should allow_value(nil).for(:librarian_total) }
     it { should allow_value(nil).for(:student_teacher_ratio) }
-  
+    it { should allow_value(nil).for(:total_staff) }
+    it { should allow_value(nil).for(:district_expense_total) }
+    it { should allow_value(nil).for(:expenses_for_instruction) }
+
 
   end
 
