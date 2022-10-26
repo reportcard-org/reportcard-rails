@@ -24,8 +24,9 @@ RSpec.describe District, type: :model do
     it { should allow_value(nil).for(:expenses_for_instruction) }
     it { should allow_value(nil).for(:salaries_total) }
     it { should allow_value(nil).for(:salaries_instruction) }
-
-
+    it { should allow_value(nil).for(:instruction_salary_percent_of_total) }
+    it { should allow_value(nil).for(:per_student_expenditure) }
+    it { should allow_value(nil).for(:per_teacher_salary_expenses) }
   end
 
   describe 'relationships' do
