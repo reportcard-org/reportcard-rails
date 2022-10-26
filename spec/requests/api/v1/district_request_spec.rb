@@ -74,6 +74,7 @@ describe 'district API' do
 
     expect(response).to be_successful
     expect(response.status).to eq(200)
+    expect(response.status).to_not eq(400)
 
     data = JSON.parse(response.body, symbolize_names: true)[:data]
 
