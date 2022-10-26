@@ -15,10 +15,13 @@ describe 'district API' do
     post "/api/v1/district_data", headers: headers, params: JSON.generate(address_params)
 
     expect(response).to be_successful
+    expect(response.status).to eq(200)
+    expect(response.status).to_not eq(400)
 
     data = JSON.parse(response.body, symbolize_names: true)[:data]
 
     expect(data).to be_a(Hash)
+    expect(data).to_not be_a(Array)
     expect(data).to have_key(:id)
     expect(data[:id]).to eq(nil)
 
@@ -70,6 +73,8 @@ describe 'district API' do
     post "/api/v1/lea_data", headers: headers, params: JSON.generate(lea_params)
 
     expect(response).to be_successful
+    expect(response.status).to eq(200)
+    expect(response.status).to_not eq(400)
 
     data = JSON.parse(response.body, symbolize_names: true)[:data]
 
