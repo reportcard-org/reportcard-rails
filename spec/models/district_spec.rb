@@ -12,7 +12,14 @@ RSpec.describe District, type: :model do
     it { should allow_value(nil).for(:kindergarten_teachers) }
     it { should allow_value(nil).for(:elementary_teachers) }
     it { should allow_value(nil).for(:secondary_teachers) }
-      it { should allow_value(nil).for(:total_teachers) }
+    it { should allow_value(nil).for(:total_teachers) }
+    it { should allow_value(nil).for(:student_teacher_ratio) }
+    it { should allow_value(nil).for(:instructional_aides) }
+    it { should allow_value(nil).for(:guidance_counselors) }
+    it { should allow_value(nil).for(:student_guidance_counselor_ratio) }
+    it { should allow_value(nil).for(:librarian_total) }
+    it { should allow_value(nil).for(:student_teacher_ratio) }
+  
 
   end
 
