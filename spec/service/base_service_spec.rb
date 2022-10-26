@@ -7,6 +7,7 @@ RSpec.describe BaseService do
       service = BaseService.census_connection
 
       expect(service).to be_an(Object)
+    
     end
   end
 

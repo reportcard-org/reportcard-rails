@@ -133,7 +133,7 @@ RSpec.describe DistrictTotal do
           :state_leg_district_upper=>"11006",
           :school_psychologists_fte=>nil,
           :support_staff_stu_wo_psych_fte=>nil}]}
-    
+
     @financial_district_data = {:count=>1,
  :next=>nil,
  :previous=>nil,
@@ -302,6 +302,7 @@ RSpec.describe DistrictTotal do
 
   it 'returns urban_centric_locale in readable format' do
     expect(@total_district.urban_centric_locale).to eq("Large City")
+    expect(@total_district.urban_centric_locale).to_not eq("Midsize City")
   end
 
   it 'returns number of schools in the district' do
