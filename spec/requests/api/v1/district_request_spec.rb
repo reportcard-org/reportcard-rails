@@ -72,6 +72,7 @@ describe 'district API' do
     post "/api/v1/lea_data", headers: headers, params: JSON.generate(lea_params)
 
     expect(response).to be_successful
+    expect(response.status).to eq(200)
 
     data = JSON.parse(response.body, symbolize_names: true)[:data]
 
