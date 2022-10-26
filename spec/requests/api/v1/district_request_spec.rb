@@ -20,6 +20,7 @@ describe 'district API' do
     data = JSON.parse(response.body, symbolize_names: true)[:data]
 
     expect(data).to be_a(Hash)
+    expect(data).to_not be_a(Array)
     expect(data).to have_key(:id)
     expect(data[:id]).to eq(nil)
 
