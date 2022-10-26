@@ -22,6 +22,8 @@ RSpec.describe District, type: :model do
     it { should allow_value(nil).for(:total_staff) }
     it { should allow_value(nil).for(:district_expense_total) }
     it { should allow_value(nil).for(:expenses_for_instruction) }
+    it { should allow_value(nil).for(:salaries_total) }
+    it { should allow_value(nil).for(:salaries_instruction) }
 
 
   end
