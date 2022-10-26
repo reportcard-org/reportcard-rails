@@ -5,6 +5,8 @@ RSpec.describe District, type: :model do
   describe 'validations' do
     it {should validate_presence_of :name}
     it {should validate_presence_of :lea_id}
+    it { should allow_value(nil).for(:urban_centric_locale) }
+
   end
 
   describe 'relationships' do
