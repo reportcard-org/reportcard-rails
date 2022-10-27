@@ -21,7 +21,7 @@ Check out the deployed application [here](https://reportcard-8xtook7k8-report-ca
 
 # Schema
 
-<img width="808" src="![image](![image](https://user-images.githubusercontent.com/102967531/198361770-e0381868-672d-41c4-90d0-3e3cd8fbab49.png))">
+![image](https://user-images.githubusercontent.com/102967531/198375622-a56a406f-8371-4022-ad63-c97f3e59c61c.png)
 
 # Data Sources
 Data on school districts has been sourced from the [US Census](https://www.census.gov/data.html), the [National Center for Education Statistics](https://nces.ed.gov/datatools/), and the Urban Institute's [Education Data Portal](https://educationdata.urban.org/documentation/index.html).
