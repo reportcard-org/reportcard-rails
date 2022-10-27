@@ -1,5 +1,7 @@
 # README For: Reportcard
 
+[![reportcard-org](https://circleci.com/gh/reportcard-org/reportcard-rails.svg?style=shield)](https://app.circleci.com/pipelines/github/reportcard-org/reportcard-rails)
+
  # Project Overview
 Reportcard is an application that is designed to help teachers gather information about school districts to help them make a more informed decision about potential places to work.
 
