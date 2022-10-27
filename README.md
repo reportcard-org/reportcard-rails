@@ -6,6 +6,7 @@
 Reportcard is an application that is designed to help teachers gather information about school districts to help them make a more informed decision about potential places to work.
 
 Check out the front-end repo [here](https://github.com/reportcard-org/reportcard-fe)
+
 Check out the deployed application [here](https://reportcard-8xtook7k8-report-card.vercel.app/)
 
 ## Built With
@@ -21,6 +22,9 @@ Check out the deployed application [here](https://reportcard-8xtook7k8-report-ca
 # Schema
 
 <img width="808" src="![image](![image](https://user-images.githubusercontent.com/102967531/198361770-e0381868-672d-41c4-90d0-3e3cd8fbab49.png))">
+
+# Data Sources
+Data on school districts has been sourced from the [US Census](https://www.census.gov/data.html), the [National Center for Education Statistics](https://nces.ed.gov/datatools/), and the Urban Institute's [Education Data Portal](https://educationdata.urban.org/documentation/index.html).
 
 # API Endpoints
 The following endpoints are exposed, and all endpoints begin with this base URL: [https://reportcard-rails.herokuapp.com/](https://reportcard-rails.herokuapp.com/) , and all Graphql endpoints respond to POST /graphql requests only. Query information will need to be sent in the body of the request.
