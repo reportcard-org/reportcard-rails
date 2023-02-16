@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-5.times do |i|
+6.times do |i|
   user = User.create(name: Faker::Name.name, email: "test_email#{i}@email.test" )
 end
 
